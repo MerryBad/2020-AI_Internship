@@ -26,6 +26,6 @@ https://github.com/jgraving/DeepPoseKit \
 robust가 건장하다는 뜻으로 알고 있는데, 통계학에서는 이상치/에러값으로 부터 영향을 크게 받지 않는 (건장한) 통계량이라고 한다.
 
 ## 결론
-- VMware + 우분투 + GPU(ndivia, cuda)는 안된다.. ~삭제~ \
+- VMware + 우분투 + GPU(ndivia, cuda)는 안된다.. ~삭제~ 
 - 새로운 툴킷을 활용해보자
        
