@@ -32,4 +32,4 @@ sudo lspci -v | less
 autoinstall, apt-get도 안됨..\
 
 --------
-결론 : VMware + 우분투 + nvidia(cuda)는 할 수가 없다..
+수 많은 재부팅과 재설치를 하고 다양한 사이트에서 참고하여 설치해보았지만 안 된다..
