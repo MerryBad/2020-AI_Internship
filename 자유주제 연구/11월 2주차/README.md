@@ -29,5 +29,14 @@ Optical Flow를 적용하기 위해서는
 
 ![image](https://user-images.githubusercontent.com/49221790/99051428-bfbf8f80-25db-11eb-9bae-d3872c2e6834.png)
 
-영상에서 관심 픽셀들을 설정하고, 각 관심 점들을 중심으로 하는 블록을 설정한다. 그 블록 단위로 저 위의 식을 적용해서 Motion Vector를 구하면 된다. 
+영상에서 관심 픽셀들을 설정하고, 각 관심 픽셀들을 중심으로 하는 블록을 설정한다. 그 블록 단위로 저 위의 식을 적용해서 Motion Vector를 구하면 된다. 
 OpenCV에서 Lucas-Kanade 라는 API로 제공하고 있다.
+
+API로 적용해 보았을 때
+![image](https://user-images.githubusercontent.com/49221790/99057870-b46e6300-25df-11eb-8c6b-2c759b4d0ceb.png)
+
+움직임에 따라 선이 생기는 것을 확인할 수 있었다.
+
+![image](https://user-images.githubusercontent.com/49221790/99057626-69545000-25df-11eb-85ae-c7668cd61392.png)
+
+배경이 함께 움직이는 경우 배경도 관심 픽셀로 잡혀서 매우 난잡해진다.
