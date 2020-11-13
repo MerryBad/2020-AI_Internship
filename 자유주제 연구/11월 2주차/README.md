@@ -11,12 +11,12 @@ Optical Flow를 적용하기 위해서는
 
 ![image](https://user-images.githubusercontent.com/49221790/99050701-87b84c80-25db-11eb-8830-53a136f91ba9.png)
 
-(1) 식의 우항을 전개하면,
+(1) 식의 우항을 테일러 급수 전개를 하면,  
 
 ![image](https://user-images.githubusercontent.com/49221790/99050962-9acb1c80-25db-11eb-9309-50225372bccc.png)
 
 
-가 된다. 이 때, (1)과 (2)를 합치면, 다음과 같은 식이 성립한다.
+가 된다. 이 때, (1)과 (2)가 동시에 성립하려면, (2)에 있는 미분식의 합이 0이여야 한다. 즉, 다음과 같은 식이 성립한다.
 
 ![image](https://user-images.githubusercontent.com/49221790/99051113-a61e4800-25db-11eb-8226-9242f3ba48af.png)
 
@@ -24,19 +24,20 @@ Optical Flow를 적용하기 위해서는
 
 ![image](https://user-images.githubusercontent.com/49221790/99051277-b2a2a080-25db-11eb-8c1a-e59a63857b98.png)
 
-와 는 결국, x와 y방향으로의 각각 움직임의 속도를 가리킵니다. 마지막으로, 식(4)를 간추리면
-다음과 같이 쓸 수 있다.
+ax(거리)/at(시간)은 결국, x와 y방향으로의 각각 움직임의 속도를 가리킨다.  
+또한 aI/ax, aI/ay, aI/at는 각각 이미지 I에 대한 x방향, y방향의 편미분 Ix, Iy, It이다.  
+마지막으로, 식(4)를 간추리면 다음과 같이 쓸 수 있다.
 
 ![image](https://user-images.githubusercontent.com/49221790/99051428-bfbf8f80-25db-11eb-9bae-d3872c2e6834.png)
 
 영상에서 관심 픽셀들을 설정하고, 각 관심 픽셀들을 중심으로 하는 블록을 설정한다. 그 블록 단위로 저 위의 식을 적용해서 Motion Vector를 구하면 된다. 
 OpenCV에서 Lucas-Kanade 라는 API로 제공하고 있다.
 
-API로 적용해 보았을 때
-![image](https://user-images.githubusercontent.com/49221790/99057870-b46e6300-25df-11eb-8c6b-2c759b4d0ceb.png)
+API로 적용해 보았을 때  
+![image](https://user-images.githubusercontent.com/49221790/99057870-b46e6300-25df-11eb-8c6b-2c759b4d0ceb.png)  
 
-움직임에 따라 선이 생기는 것을 확인할 수 있었다.
+움직임에 따라 선이 생기는 것을 확인할 수 있었다.  
 
-![image](https://user-images.githubusercontent.com/49221790/99057626-69545000-25df-11eb-85ae-c7668cd61392.png)
+![image](https://user-images.githubusercontent.com/49221790/99057626-69545000-25df-11eb-85ae-c7668cd61392.png)  
 
 배경이 함께 움직이는 경우 배경도 관심 픽셀로 잡혀서 매우 난잡해진다.
