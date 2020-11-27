@@ -28,9 +28,9 @@
 >>Optical flow
 
 >11월 3주차
->>CNN, PyTorch
+>>CNN, PyTorch  
 >>Poker 문제
 
 >11월 4주차
->>계획수립, 계획수립 기법
+>>계획수립, 계획수립 기법  
 >>Poker 문제 다른 사람 코드 보기
