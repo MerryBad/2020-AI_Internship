@@ -1,5 +1,5 @@
 # 2020-AI_Internship
-https://www.kaggle.com/c/riiid-test-answer-prediction
+https://www.kaggle.com/c/riiid-test-answer-prediction  
 학생의 성과 기록과 같은 질문에 대한 다른 학생의 성과, 질문 자체에 대한 메타데이터 등으로
 학생이 다음 질문에 올바르게 답할 수 있는지 예측하는 것이 목표.
 
